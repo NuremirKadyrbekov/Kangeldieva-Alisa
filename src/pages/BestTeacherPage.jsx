@@ -1,8 +1,8 @@
-const videoUrl = 'https://youtu.be/IVPkhBqueqc?si=bxLIrM0VuSRI5exa'
-const videoEmbedUrl = 'https://www.youtube.com/embed/IVPkhBqueqc?si=bxLIrM0VuSRI5exa'
+const videoUrl = 'https://youtu.be/6zLmjk7P_XA?si=goPeXXEAw5HtDqhJ'
+const videoEmbedUrl = 'https://www.youtube.com/embed/6zLmjk7P_XA?si=j7_7VTKA0w4b6ud3'
+const documentUrl = 'https://drive.google.com/file/d/1uyic5atQat2v_HJpxmazjIZZXGILapuN/view?usp=drive_link'
+const documentEmbedUrl = 'https://drive.google.com/file/d/1uyic5atQat2v_HJpxmazjIZZXGILapuN/preview'
 import img from '../assets/teacher3.jpeg'
-
-
 
 const sections = [
   {
@@ -97,6 +97,23 @@ export function BestTeacherPage() {
           <a className="best-teacher-page__video-link" href={videoUrl} target="_blank" rel="noreferrer">
             YouTube'та ачуу
           </a>
+
+          <section className="best-teacher-page__document">
+            <span className="layout-kicker">Документ</span>
+            <h2>Мыкты мугалим 2026 боюнча материал</h2>
+            {/* <p>Бул бөлүмдө конкурска тиешелүү документти түз көрүп жана өзүнчө терезеде ачып алсаңыз болот.</p> */}
+            <div className="best-teacher-page__document-frame">
+              <iframe
+                src={documentEmbedUrl}
+                title="Мыкты мугалим 2026 документи"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+            <a className="best-teacher-page__document-link" href={documentUrl} target="_blank" rel="noreferrer">
+              Документти ачуу
+            </a>
+          </section>
         </aside>
       </div>
     </section>

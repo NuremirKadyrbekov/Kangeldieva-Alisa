@@ -1015,6 +1015,40 @@
   text-decoration: none;
 }
 
+.best-teacher-page__document {
+  display: grid;
+  gap: 16px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(79, 94, 81, 0.08);
+}
+
+.best-teacher-page__document-frame {
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(79, 94, 81, 0.08);
+  background: rgba(228, 236, 229, 0.9);
+}
+
+.best-teacher-page__document-frame iframe {
+  display: block;
+  width: 100%;
+  min-height: 520px;
+  border: 0;
+  background: #fff;
+}
+
+.best-teacher-page__document-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #304137;
+  color: #f7faf7;
+  text-decoration: none;
+}
+
 .best-teacher-page__meta {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1164,7 +1198,8 @@
   }
 
   .document-frame__viewer,
-  .document-frame__viewer iframe {
+  .document-frame__viewer iframe,
+  .best-teacher-page__document-frame iframe {
     min-height: 420px;
   }
 }
