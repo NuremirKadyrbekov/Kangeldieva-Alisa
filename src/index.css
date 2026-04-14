@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #edf2ec;
+  --bg-soft: #f6f8f5;
+  --panel: rgba(251, 252, 250, 0.92);
+  --text-strong: #1f2a22;
+  --text-muted: #5e6a61;
+  --accent: #6f8474;
+  --line: rgba(79, 94, 81, 0.12);
+
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.74), transparent 26%),
+    linear-gradient(180deg, #eff4ef 0%, #e7ede7 100%);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(79, 94, 81, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 94, 81, 0.03) 1px, transparent 1px);
+  background-size: 96px 96px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.18), transparent 86%);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0;
+  font-weight: 800;
+  color: var(--text-strong);
+}
+
+p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  :root {
+    font-size: 16px;
+  }
+}

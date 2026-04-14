@@ -1,0 +1,1167 @@
+.app-shell {
+  min-height: 100vh;
+}
+
+.page-shell {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: 20px 24px 32px;
+}
+
+.topbar {
+  position: sticky;
+  top: 16px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+  background: rgba(247, 249, 246, 0.9);
+  border: 1px solid rgba(79, 94, 81, 0.12);
+  border-radius: 22px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 48px rgba(39, 52, 43, 0.08);
+}
+
+.brand-mark {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.layout-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.brand-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-strong);
+}
+
+.desktop-nav {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.desktop-nav a,
+.mobile-nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a.is-active,
+.mobile-nav a:hover,
+.mobile-nav a.is-active {
+  color: var(--text-strong);
+  background: rgba(111, 132, 116, 0.12);
+}
+
+.menu-toggle,
+.sidebar-close {
+  border: 0;
+  color: var(--text-strong);
+  background: transparent;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(111, 132, 116, 0.12);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  margin: 4px auto;
+  background: currentColor;
+}
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: rgba(26, 36, 30, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.mobile-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  width: min(88vw, 360px);
+  padding: 24px 18px 22px;
+  background: #f5f7f4;
+  border-left: 1px solid rgba(79, 94, 81, 0.12);
+  box-shadow: -16px 0 42px rgba(39, 52, 43, 0.12);
+  transform: translateX(100%);
+  transition: transform 220ms ease;
+}
+
+.mobile-sidebar.is-open {
+  transform: translateX(0);
+}
+
+.mobile-sidebar__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(79, 94, 81, 0.12);
+}
+
+.mobile-sidebar__header h2 {
+  margin: 8px 0 0;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.sidebar-close {
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 18px;
+}
+
+.mobile-nav a {
+  padding: 12px 10px;
+  border-radius: 14px;
+}
+
+.page-main {
+  min-height: calc(100vh - 120px);
+}
+
+.home-page {
+  min-height: calc(100vh - 124px);
+}
+
+.home-page__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 24px;
+  min-height: inherit;
+}
+
+.home-page__copy,
+.home-page__media {
+  border: 1px solid rgba(79, 94, 81, 0.12);
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(246, 249, 245, 0.96)),
+    radial-gradient(circle at top right, rgba(140, 159, 145, 0.12), transparent 30%);
+  box-shadow: 0 28px 80px rgba(39, 52, 43, 0.08);
+}
+
+.home-page__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(28px, 5vw, 56px);
+}
+
+.home-page__copy h1 {
+  max-width: 10ch;
+  margin: 12px 0 0;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.94;
+  letter-spacing: -0.05em;
+  color: var(--text-strong);
+}
+
+.home-page__role {
+  max-width: 42rem;
+  margin-top: 22px;
+  font-size: 1.06rem;
+  color: var(--text-muted);
+}
+
+.home-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.primary-button {
+  color: #f7faf7;
+  background: #304137;
+}
+
+.secondary-button {
+  color: var(--text-strong);
+  background: rgba(111, 132, 116, 0.1);
+}
+
+.home-page__media {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 18px;
+}
+
+.portrait-card {
+  position: relative;
+  width: 100%;
+  min-height: 60%;
+  overflow: hidden;
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(230, 237, 231, 0.8), rgba(212, 224, 214, 0.92)),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent 55%);
+}
+
+.portrait-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.portrait-card__placeholder {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 620px;
+  overflow: hidden;
+}
+
+.portrait-card__halo {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  transform: translateY(-50px);
+}
+
+.portrait-card__avatar {
+  position: relative;
+  width: min(58%, 320px);
+  aspect-ratio: 0.78;
+  border-radius: 180px 180px 40px 40px;
+  background:
+    radial-gradient(circle at 50% 26%, rgba(255, 255, 255, 0.16) 0 14%, transparent 14.5%),
+    linear-gradient(180deg, rgba(69, 85, 73, 0.96), rgba(53, 66, 57, 0.98));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.section-page {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 124px);
+}
+
+.section-page__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  min-height: 100%;
+  padding: clamp(28px, 5vw, 56px);
+  border: 1px solid rgba(79, 94, 81, 0.12);
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(246, 249, 245, 0.96)),
+    radial-gradient(circle at top right, rgba(140, 159, 145, 0.12), transparent 30%);
+  box-shadow: 0 28px 80px rgba(39, 52, 43, 0.08);
+}
+
+.section-page__inner h1 {
+  max-width: 12ch;
+  margin: 12px 0 0;
+  font-size: clamp(2.9rem, 8vw, 6.4rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+  color: var(--text-strong);
+}
+
+.info-page,
+.education-page,
+.best-teacher-page,
+.laws-page,
+.standards-page,
+.philosophy-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.info-page__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 24px;
+}
+
+.info-page__intro,
+.info-page__summary,
+.info-page__details,
+.education-page__inner,
+.best-teacher-page__hero,
+.best-teacher-page__article,
+.best-teacher-page__aside {
+  border: 1px solid rgba(79, 94, 81, 0.12);
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(246, 249, 245, 0.96)),
+    radial-gradient(circle at top right, rgba(140, 159, 145, 0.12), transparent 30%);
+  box-shadow: 0 28px 80px rgba(39, 52, 43, 0.08);
+}
+
+.info-page__intro,
+.info-page__summary,
+.info-page__details,
+.education-page__inner,
+.best-teacher-page__hero,
+.best-teacher-page__article,
+.best-teacher-page__aside {
+  padding: clamp(24px, 4vw, 36px);
+}
+
+.info-page__intro h1,
+.education-page__inner h1,
+.best-teacher-page__hero h1 {
+  margin: 12px 0 0;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+  color: var(--text-strong);
+}
+
+.info-page__lead,
+.best-teacher-page__lead,
+.best-teacher-page__aside p,
+.best-teacher-page__block p {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.info-page__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.info-page__tags span,
+.education-page__card span,
+.best-teacher-page__meta span {
+  color: var(--text-muted);
+}
+
+.info-page__tags span {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(111, 132, 116, 0.1);
+  border: 1px solid rgba(79, 94, 81, 0.08);
+}
+
+.info-page__summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  color: #f7faf7;
+  background:
+    linear-gradient(180deg, rgba(38, 53, 44, 0.96), rgba(51, 67, 57, 0.98));
+}
+
+.layout-kicker--muted {
+  color: rgba(240, 246, 240, 0.68);
+}
+
+.info-page__summary-text {
+  margin-top: 16px;
+  color: rgba(247, 250, 247, 0.9);
+  line-height: 1.8;
+}
+
+.info-page__portrait {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+.info-page__portrait-media {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(81, 99, 86, 0.4), rgba(43, 57, 48, 0.72)),
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.18), transparent 48%);
+}
+
+.info-page__portrait-image,
+.best-teacher-page__portrait-image,
+.philosophy-page__portrait-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.info-page__portrait-fallback,
+.philosophy-page__portrait-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.info-page__portrait-fallback strong,
+.philosophy-page__portrait-fallback strong {
+  font-size: 1.05rem;
+  letter-spacing: 0.16em;
+}
+
+.info-page__portrait-caption {
+  display: grid;
+  gap: 12px;
+}
+
+.info-page__portrait-caption p {
+  margin: 0;
+  color: rgba(247, 250, 247, 0.82);
+  line-height: 1.75;
+}
+
+.info-page__portrait-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.info-page__portrait-meta-item {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.info-page__portrait-meta-item span,
+.info-page__portrait-meta-item strong {
+  display: block;
+}
+
+.info-page__portrait-meta-item span {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 250, 247, 0.56);
+}
+
+.info-page__portrait-meta-item strong {
+  margin-top: 8px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.info-page__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.info-page__fact-card {
+  padding: 14px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.info-page__fact-card span,
+.info-page__fact-card strong {
+  display: block;
+}
+
+.info-page__fact-card span {
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 250, 247, 0.62);
+}
+
+.info-page__fact-card strong {
+  margin-top: 8px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.info-page__details-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.info-page__details-header h2,
+.best-teacher-page__block h2,
+.best-teacher-page__aside h2 {
+  margin: 10px 0 0;
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  line-height: 1.2;
+}
+
+.info-page__details-header p {
+  max-width: 360px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.info-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin: 0;
+}
+
+.info-page__item {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(111, 132, 116, 0.06);
+  border: 1px solid rgba(79, 94, 81, 0.08);
+}
+
+.info-page__item dt {
+  margin-bottom: 10px;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.info-page__item dd {
+  margin: 0;
+  line-height: 1.75;
+  color: var(--text-strong);
+}
+
+.education-page__inner {
+  min-height: calc(100vh - 124px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.education-page__card {
+  width: min(100%, 520px);
+  margin-top: 28px;
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(111, 132, 116, 0.08);
+  border: 1px solid rgba(79, 94, 81, 0.08);
+}
+
+.education-page__card span,
+.education-page__card strong {
+  display: block;
+}
+
+.education-page__card span {
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.education-page__card strong {
+  margin-top: 12px;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  color: var(--text-strong);
+}
+
+.best-teacher-page__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  gap: 24px;
+}
+
+.laws-page__hero,
+.standards-page__hero,
+.philosophy-page__hero,
+.standards-page__card,
+.philosophy-page__intro,
+.philosophy-page__mission,
+.philosophy-page__principles article {
+  border: 1px solid rgba(79, 94, 81, 0.12);
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(246, 249, 245, 0.96)),
+    radial-gradient(circle at top right, rgba(140, 159, 145, 0.12), transparent 30%);
+  box-shadow: 0 28px 80px rgba(39, 52, 43, 0.08);
+  padding: clamp(24px, 4vw, 36px);
+}
+
+.laws-page__hero h1,
+.standards-page__hero h1,
+.philosophy-page__hero h1,
+.philosophy-page__intro h2,
+.philosophy-page__mission h2 {
+  margin: 12px 0 0;
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  line-height: 0.96;
+  letter-spacing: -0.05em;
+  color: var(--text-strong);
+}
+
+.laws-page__hero p,
+.standards-page__hero p,
+.philosophy-page__hero p,
+.standards-page__card p,
+.philosophy-page__intro p,
+.philosophy-page__mission p,
+.philosophy-page__principles p {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.laws-page__card p,
+.standards-page__card p,
+.philosophy-page__intro p,
+.philosophy-page__mission p,
+.philosophy-page__principles p {
+  margin-top: 14px;
+}
+
+.laws-page__grid,
+.philosophy-page__principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.document-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.document-frame {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.42fr) minmax(0, 1fr);
+  gap: 20px;
+  border: 1px solid rgba(79, 94, 81, 0.12);
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(246, 249, 245, 0.96)),
+    radial-gradient(circle at top right, rgba(140, 159, 145, 0.12), transparent 30%);
+  box-shadow: 0 28px 80px rgba(39, 52, 43, 0.08);
+  padding: 18px;
+}
+
+.document-frame__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 12px 10px 12px 12px;
+}
+
+.document-frame__meta {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(111, 132, 116, 0.1);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.document-frame__header h2 {
+  margin: 12px 0 0;
+  font-size: clamp(1.15rem, 2vw, 1.7rem);
+  line-height: 1.25;
+  color: var(--text-strong);
+}
+
+.document-frame__header p {
+  margin-top: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.document-frame__header a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: 18px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #304137;
+  color: #f7faf7;
+  text-decoration: none;
+}
+
+.document-frame__viewer {
+  min-height: 680px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(228, 236, 229, 0.9);
+  border: 1px solid rgba(79, 94, 81, 0.08);
+}
+
+.document-frame__viewer iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 680px;
+  border: 0;
+  background: #fff;
+}
+
+.laws-page__card h2,
+.standards-page__card h2,
+.philosophy-page__principles h3 {
+  margin: 10px 0 0;
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  line-height: 1.25;
+}
+
+.laws-page__meta,
+.standards-page__meta,
+.philosophy-page__quote-label {
+  display: inline-flex;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(111, 132, 116, 0.1);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.laws-page__card a,
+.standards-page__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: 18px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #304137;
+  color: #f7faf7;
+  text-decoration: none;
+}
+
+.standards-page__card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.9fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.standards-page__stats {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.standards-page__stats div {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(111, 132, 116, 0.08);
+  border: 1px solid rgba(79, 94, 81, 0.08);
+}
+
+.standards-page__stats span,
+.standards-page__stats strong {
+  display: block;
+}
+
+.standards-page__stats span {
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.standards-page__stats strong {
+  margin-top: 8px;
+  color: var(--text-strong);
+  line-height: 1.5;
+}
+
+.philosophy-page__hero blockquote {
+  margin: 28px 0 0;
+  padding: 22px 24px;
+  border-left: 3px solid rgba(111, 132, 116, 0.42);
+  background: rgba(111, 132, 116, 0.08);
+  border-radius: 0 22px 22px 0;
+}
+
+.philosophy-page__hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.78fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.philosophy-page__hero-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.philosophy-page__portrait {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+.philosophy-page__portrait-frame {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  border-radius: 26px;
+  border: 1px solid rgba(79, 94, 81, 0.08);
+  background:
+    linear-gradient(180deg, rgba(228, 236, 229, 0.94), rgba(212, 224, 214, 0.96)),
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.48), transparent 44%);
+}
+
+.philosophy-page__portrait-caption {
+  display: grid;
+  gap: 12px;
+}
+
+.philosophy-page__portrait-caption p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.philosophy-page__hero blockquote p {
+  margin: 8px 0 0;
+  color: var(--text-strong);
+}
+
+.philosophy-page__mission blockquote {
+  margin: 24px 0 0;
+  padding: 22px 24px;
+  border-left: 3px solid rgba(111, 132, 116, 0.42);
+  background: rgba(111, 132, 116, 0.08);
+  border-radius: 0 22px 22px 0;
+}
+
+.philosophy-page__mission blockquote p {
+  margin: 8px 0 0;
+  color: var(--text-strong);
+}
+
+.philosophy-page__intro h2,
+.philosophy-page__mission h2 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.philosophy-page__principles article {
+  padding: 22px 22px 20px;
+}
+
+.best-teacher-page__block + .best-teacher-page__block {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(79, 94, 81, 0.08);
+}
+
+.best-teacher-page__quote {
+  margin: 28px 0 0;
+  padding: 22px 24px;
+  border-left: 3px solid rgba(111, 132, 116, 0.42);
+  background: rgba(111, 132, 116, 0.08);
+  border-radius: 0 22px 22px 0;
+}
+
+.best-teacher-page__quote p {
+  margin: 0;
+  color: var(--text-strong);
+  line-height: 1.8;
+}
+
+.best-teacher-page__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.best-teacher-page__portrait {
+  display: grid;
+  gap: 16px;
+}
+
+.best-teacher-page__portrait-frame {
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(79, 94, 81, 0.08);
+  background:
+    linear-gradient(180deg, rgba(228, 236, 229, 0.96), rgba(246, 249, 245, 0.96)),
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.56), transparent 42%);
+}
+
+.best-teacher-page__portrait-image {
+  min-height: 420px;
+}
+
+.best-teacher-page__portrait-meta {
+  padding: 18px 18px 0;
+  border-top: 1px solid rgba(79, 94, 81, 0.08);
+}
+
+.best-teacher-page__portrait-meta h2 {
+  margin: 0;
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  line-height: 1.25;
+  color: var(--text-strong);
+}
+
+.best-teacher-page__portrait-meta p {
+  margin: 12px 0 0;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+.best-teacher-page__video-frame {
+  overflow: hidden;
+  border-radius: 22px;
+  border: 1px solid rgba(79, 94, 81, 0.08);
+  background: rgba(228, 236, 229, 0.9);
+}
+
+.best-teacher-page__video-frame iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.best-teacher-page__video-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #304137;
+  color: #f7faf7;
+  text-decoration: none;
+}
+
+.best-teacher-page__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.best-teacher-page__meta div {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(111, 132, 116, 0.08);
+  border: 1px solid rgba(79, 94, 81, 0.08);
+}
+
+.best-teacher-page__meta span,
+.best-teacher-page__meta strong {
+  display: block;
+}
+
+.best-teacher-page__meta span {
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.best-teacher-page__meta strong {
+  margin-top: 8px;
+  color: var(--text-strong);
+}
+
+@media (max-width: 980px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .section-page {
+    min-height: calc(100vh - 108px);
+  }
+
+  .home-page__content {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page__media {
+    order: -1;
+  }
+
+  .portrait-card__image,
+  .portrait-card__placeholder {
+    min-height: 440px;
+  }
+
+  .info-page__hero,
+  .best-teacher-page__content,
+  .standards-page__card,
+  .document-frame {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-page__hero-grid,
+  .info-page__portrait-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 14px 12px 20px;
+  }
+
+  .topbar {
+    top: 10px;
+    padding: 14px 16px;
+    border-radius: 18px;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .section-page__inner {
+    border-radius: 24px;
+  }
+
+  .home-page__copy,
+  .home-page__media {
+    border-radius: 24px;
+  }
+
+  .info-page__intro,
+  .info-page__summary,
+  .info-page__details,
+  .education-page__inner,
+  .best-teacher-page__hero,
+  .best-teacher-page__article,
+  .best-teacher-page__aside,
+  .laws-page__hero,
+  .standards-page__hero,
+  .philosophy-page__hero,
+  .standards-page__card,
+  .document-frame,
+  .philosophy-page__intro,
+  .philosophy-page__mission,
+  .philosophy-page__principles article {
+    border-radius: 24px;
+  }
+
+  .home-page__actions {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+  .section-page__inner h1 {
+    max-width: none;
+    font-size: clamp(2.4rem, 12vw, 4.2rem);
+  }
+
+  .home-page__copy h1 {
+    max-width: none;
+    font-size: clamp(2.6rem, 12vw, 4.4rem);
+  }
+
+  .portrait-card__image,
+  .portrait-card__placeholder {
+    min-height: 360px;
+  }
+
+  .info-page__facts,
+  .best-teacher-page__meta {
+    grid-template-columns: 1fr;
+  }
+
+  .best-teacher-page__portrait-image,
+  .info-page__portrait-media {
+    min-height: 320px;
+  }
+
+  .philosophy-page__portrait-frame {
+    min-height: 360px;
+  }
+
+  .document-frame__viewer,
+  .document-frame__viewer iframe {
+    min-height: 420px;
+  }
+}
