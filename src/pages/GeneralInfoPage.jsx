@@ -20,7 +20,7 @@ const profileItems = [
   { label: 'Билими', value: 'Жогорку (магистрант)' },
   { label: 'Кесиби', value: 'Мугалим' },
   { label: 'Эмгек стажы', value: '3 жыл 6 ай' },
-  { label: 'Иш тажрыйбасы', value: 'Маалымат кийин толукталат' },
+  { label: 'Иш тажрыйбасы', value: 'Иш тажрыйбам 2022-жылдын 1-сентябрынан тартып азыркы учурга чейин К.Эгембердиев мектебинде эмгектенем' },
   { label: 'Кайсыл тилдерди билет', value: 'кыргыз, орус' },
   { label: 'Телефон номер', value: '996703491442' },
 ]
@@ -70,7 +70,8 @@ export function GeneralInfoPage() {
               <div className="info-page__portrait-meta">
                 <div className="info-page__portrait-meta-item">
                   <span>Негизги багыт</span>
-                  <strong>Биология</strong>
+                  <strong>Биология <br /> Адам жана коом
+                  </strong>
                 </div>
                 <div className="info-page__portrait-meta-item">
                   <span>Иш орду</span>
