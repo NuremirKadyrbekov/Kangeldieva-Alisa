@@ -1,5 +1,5 @@
-const videoUrl = 'https://youtube.com/shorts/wqvDpcW72lw?si=IzoptHKG4ESJGvTC'
-const videoEmbedUrl = 'https://youtube.com/shorts/wqvDpcW72lw?si=IzoptHKG4ESJGvTC'
+const videoUrl = 'https://www.youtube.com/watch?v=TumJpwt0QbE'
+const videoEmbedUrl = 'https://www.youtube.com/embed/TumJpwt0QbE?si=toNNRdkgJYPRyFO8'
 const documentUrl = 'https://drive.google.com/file/d/1bu__gz1WfrywoPdH1upBRsZMATqgyxJp/view?usp=sharing'
 const documentEmbedUrl = 'https://drive.google.com/file/d/1bu__gz1WfrywoPdH1upBRsZMATqgyxJp/preview'
 import img from '../assets/teacher3.jpeg'
