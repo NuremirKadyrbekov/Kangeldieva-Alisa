@@ -1,7 +1,7 @@
-const videoUrl = 'https://youtu.be/6zLmjk7P_XA?si=goPeXXEAw5HtDqhJ'
-const videoEmbedUrl = 'https://www.youtube.com/embed/6zLmjk7P_XA?si=j7_7VTKA0w4b6ud3'
-const documentUrl = 'https://drive.google.com/file/d/1uyic5atQat2v_HJpxmazjIZZXGILapuN/view?usp=drive_link'
-const documentEmbedUrl = 'https://drive.google.com/file/d/1uyic5atQat2v_HJpxmazjIZZXGILapuN/preview'
+const videoUrl = 'https://youtube.com/shorts/wqvDpcW72lw?si=IzoptHKG4ESJGvTC'
+const videoEmbedUrl = 'https://youtube.com/shorts/wqvDpcW72lw?si=IzoptHKG4ESJGvTC'
+const documentUrl = 'https://drive.google.com/file/d/1bu__gz1WfrywoPdH1upBRsZMATqgyxJp/view?usp=sharing'
+const documentEmbedUrl = 'https://drive.google.com/file/d/1bu__gz1WfrywoPdH1upBRsZMATqgyxJp/preview'
 import img from '../assets/teacher3.jpeg'
 
 const sections = [
